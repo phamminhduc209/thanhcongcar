@@ -1,0 +1,48 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(14px);
+    font-weight: $font-weight-bold;
+    letter-spacing: .09em;
+    margin-top: rem(40px);
+
+    @include mq('md', min) {
+        font-size: rem(18px);
+        margin-top: rem(77px);
+    }
+
+    & > li {
+        &.prev, &.next {
+            @include mq('md', min) {
+                width: rem(69px);
+            }
+        }
+    }
+
+    .page-numbers {
+        background-color: $white;
+        border: 1px solid $gray-400;
+        border-radius: rem(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: rem(35px);
+        width: rem(35px);
+        margin: 0 rem(4.5px);
+
+        @include mq('md', min) {
+            height: rem(48px);
+            width: rem(48px);
+        }
+
+        &.current, &:hover {
+            background-color: $gray-400;
+            color: $gray-100;
+        }
+    }
+
+    .disabled {
+        color: $gray-100;
+    }
+}

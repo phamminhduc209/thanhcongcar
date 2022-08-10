@@ -1,0 +1,35 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    color: $body-color;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+
+    &:focus,
+    &.focus {
+        outline: 0;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+}
+
+.hover {
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+}

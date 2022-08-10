@@ -1,0 +1,55 @@
+.header {
+    background-color: bisque;
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-logo {
+        @include mq('md', min) {
+            max-width: rem(200px);
+
+            img {
+                width: auto;
+                max-height: rem(60px);
+            }
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &-item {
+        @include mq('md', min) {
+            &:not(:last-child) {
+                margin-right: rem(20px);
+            }
+        }
+    }
+
+    &-link {
+        display: block;
+        font-size: rem(16px);
+        position: relative;
+
+        @include mq('md', min) {
+            line-height: rem(60px);
+        }
+
+        span {
+            background: linear-gradient(#fff, #fff) 100% 100%/0 1px no-repeat;
+            transition: background-size .4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+        }
+
+        &:hover {
+            span {
+                background-position: 0 100%;
+                background-size: 100% 1px;
+            }
+        }
+    }
+}

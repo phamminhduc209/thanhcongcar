@@ -1,0 +1,49 @@
+.animate__animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.animate__fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.animate__fadeUp {
+    -webkit-animation-name: fadeUp;
+    animation-name: fadeUp;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.split-js {
+    overflow-y: hidden;
+
+    .inline {
+        display: inline-block;
+    }
+
+    .o {
+        display: inline-block;
+
+        &.o-space {
+            width: 0.28em;
+        }
+    }
+
+    .c {
+        display: block;
+        transition: opacity 0.9s cubic-bezier(0.3, 0.4, 0.1, 1), transform 0.9s cubic-bezier(0.3, 0.4, 0.1, 1);
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+
+    &.split-js--shown .c {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
