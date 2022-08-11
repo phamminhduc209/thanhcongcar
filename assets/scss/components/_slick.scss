@@ -31,7 +31,8 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     border: none;
     outline: none;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         outline: none;
         background: transparent;
         color: transparent;
@@ -80,11 +81,9 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 /* Dots */
-
-
 .slick-dots {
     position: absolute;
-    bottom: rem(-40px);
+    bottom: rem(15px);
     list-style: none;
     display: flex;
     justify-content: center;
@@ -92,46 +91,60 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     margin: 0;
     width: 100%;
+
     li {
+        border: rem(3px) solid $white;
+        border-radius: 50%;
+        opacity: .4;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: rem(15px);
-        width: rem(15px);
+        height: rem(12px);
+        width: rem(12px);
         margin: 0 rem(2px);
+
         @include mq("md", min) {
             margin: 0 rem(5px);
-        } 
+        }
+
         padding: 0;
         text-align: center;
         cursor: pointer;
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
+
         button {
-            border: 0;
-            background: transparent;
-            display: block;
-            height: rem(7px);
-            width: rem(7px);
-            outline: none;
-            line-height: 0px;
-            font-size: 0px;
-            color: transparent;
-            padding: 0;
-            cursor: pointer;
-            background: #000;
-            border-radius: 50%;
-            transition: $transition;
+            display: none;
+            // border: 0;
+            // background: transparent;
+            // display: block;
+            // height: rem(7px);
+            // width: rem(7px);
+            // outline: none;
+            // line-height: 0px;
+            // font-size: 0px;
+            // color: transparent;
+            // padding: 0;
+            // cursor: pointer;
+            // background: #000;
+            // border-radius: 50%;
+            // transition: $transition;
+
+
             @include mq("md", min) {
                 height: rem(10px);
                 width: rem(10px);
-            } 
-            &:hover, &:focus {
+            }
+
+            &:hover,
+            &:focus {
                 outline: none;
+
                 &:before {
                     opacity: $slick-opacity-on-hover;
                 }
             }
+
             &:before {
                 position: absolute;
                 top: 0;
@@ -147,16 +160,12 @@ $slick-opacity-not-active: 0.25 !default;
                 -moz-osx-font-smoothing: grayscale;
             }
         }
+
         &.slick-active {
-            // button {
-            //     width: rem(12px);
-            //     height: rem(12px);
-            //     @include mq("md", min) {
-            //         width: rem(15px);
-            //         height: rem(15px);
-            //     } 
-            // }
+            background-color: $white;
+            opacity: 1;
         }
+
         &.slick-active button:before {
             color: $slick-dot-color-active;
             opacity: $slick-opacity-default;

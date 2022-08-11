@@ -33,3 +33,24 @@
         transition: opacity 0.3s;
     }
 }
+
+.btn-primary {
+    border-radius: rem(5px);
+    border: 0;
+    color: $white;
+    font-weight: 500;
+    text-transform: initial;
+    background: linear-gradient(to right, #0f959b, #064a50);
+    min-height: rem(45px);
+    line-height: rem(45px);
+    font-size: rem(14px);
+    letter-spacing: .03em;
+    padding: 0 1.2em;
+    max-width: 100%;
+    transition: all .3s;
+
+    &:hover {
+        background: linear-gradient(to left, #0f959b, #064a50);
+        transition: all .3s;
+    }
+}
