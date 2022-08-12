@@ -7,15 +7,21 @@
         font-weight: bold;
         text-align: center;
         letter-spacing: .05em;
-        margin-bottom: rem(80px);
+        margin-bottom: rem(60px);
     }
 
     &-product {
-        background-color: #F1F1F1;
-
         .section-title {
-            margin-bottom: rem(60px);
+            margin-bottom: rem(20px);
         }
+    }
+
+    &-gray {
+        background-color: #F1F1F1;
+    }
+
+    &-white {
+        background-color: $white;
     }
 }
 
@@ -27,10 +33,6 @@
     }
 }
 
-.row {
-    display: flex;
-    flex-flow: row wrap;
-}
 
 .why-choose {
     &-list {
@@ -178,6 +180,86 @@
         .slick-list{
             padding-top: rem(20px) !important;
             padding-bottom: rem(20px) !important;
+        }
+
+        .slick-arrow {
+            &::before {
+                content: "";
+                background-size: 100% 100%;
+                width: rem(25px);
+                height: rem(25px);
+                display: block;
+                transition: background .3s ease-in-out;
+            }
+        }
+
+        .slick-prev {
+            &::before {
+                background-image: url(../images/common/arrow_left.svg);
+            }
+
+            &:hover {
+                &::before {
+                    background-image: url(../images/common/arrow_left_hover.svg);
+                }
+            }
+        }
+
+        .slick-next {
+            &::before {
+                background-image: url(../images/common/arrow_right.svg);
+            }
+
+            &:hover {
+                &::before {
+                    background-image: url(../images/common/arrow_right_hover.svg);
+                }
+            }
+        }
+    }
+}
+
+.guide {
+    &-list {
+        @include mq('md', min) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 rem(-30px);
+        }
+    }
+
+    &-item {
+        @include mq('md', min) {
+            max-width: 33.33%;
+            flex-basis: 33.33%;
+            padding: 0 rem(30px) rem(30px);
+        }
+    }
+
+    &-box {
+        text-align: center;
+    }
+
+    &-media {
+        margin-bottom: rem(20px);
+
+        img {
+            height: rem(233px);
+            width: auto;
+        }
+    }
+
+    h3 {
+        font-size: rem(17px);
+        margin-bottom: rem(5px);
+    }
+
+    &-btn {
+        margin-top: rem(30px);
+        
+        .btn {
+            max-width: rem(150px);
+            margin: 0 auto;
         }
     }
 }

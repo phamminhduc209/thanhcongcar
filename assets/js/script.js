@@ -59,9 +59,13 @@ app.jsSlider = function () {
     $('.js-mainvisual').slick({
         dots: true,
         infinite: true,
-        speed: 300,
+        autoplay: true,
+        autoplaySpeed: 3000,
         slidesToShow: 1,
         arrows: false,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
 }
 
@@ -70,11 +74,12 @@ app.productList = function () {
         dots: false,
         arrows: true,
         // autoplay: true,
+        autoplaySpeed: 2000,
         infinite: true,
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
-        centerMode: true,
+        // centerMode: true,
     })
 }
 

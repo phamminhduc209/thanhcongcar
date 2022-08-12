@@ -649,15 +649,14 @@ a.text-underline:hover {
 .slick-next {
 	position: absolute;
 	display: block;
-	height: 20px;
-	width: 20px;
 	line-height: 0px;
 	font-size: 0px;
+	text-indent: -99999px;
 	cursor: pointer;
 	background: rgba(0,0,0,0);
 	color: rgba(0,0,0,0);
 	top: 50%;
-	transform: translate(0, -50%);
+	transform: translateY(-50%);
 	padding: 0;
 	border: none;
 	outline: none;
@@ -1052,24 +1051,23 @@ input[type=month].form-control {
 	font-weight: bold;
 	text-align: center;
 	letter-spacing: .05em;
-	margin-bottom: 8rem;
-}
-
-.section-product {
-	background-color: #f1f1f1;
+	margin-bottom: 6rem;
 }
 
 .section-product .section-title {
-	margin-bottom: 6rem;
+	margin-bottom: 2rem;
+}
+
+.section-gray {
+	background-color: #f1f1f1;
+}
+
+.section-white {
+	background-color: #fff;
 }
 
 .mainvisual-item img {
 	width: 100%;
-}
-
-.row {
-	display: flex;
-	flex-flow: row wrap;
 }
 
 .why-choose-list {
@@ -1181,6 +1179,58 @@ input[type=month].form-control {
 .product-slider .slick-list {
 	padding-top: 2rem !important;
 	padding-bottom: 2rem !important;
+}
+
+.product-slider .slick-arrow::before {
+	content: "";
+	background-size: 100% 100%;
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+	transition: background .3s ease-in-out;
+}
+
+.product-slider .slick-prev::before {
+	background-image: url(../images/common/arrow_left.svg);
+}
+
+.product-slider .slick-prev:hover::before {
+	background-image: url(../images/common/arrow_left_hover.svg);
+}
+
+.product-slider .slick-next::before {
+	background-image: url(../images/common/arrow_right.svg);
+}
+
+.product-slider .slick-next:hover::before {
+	background-image: url(../images/common/arrow_right_hover.svg);
+}
+
+.guide-box {
+	text-align: center;
+}
+
+.guide-media {
+	margin-bottom: 2rem;
+}
+
+.guide-media img {
+	height: 23.3rem;
+	width: auto;
+}
+
+.guide h3 {
+	font-size: 1.7rem;
+	margin-bottom: .5rem;
+}
+
+.guide-btn {
+	margin-top: 3rem;
+}
+
+.guide-btn .btn {
+	max-width: 15rem;
+	margin: 0 auto;
 }
 
 .pagination {
@@ -2047,6 +2097,18 @@ input[type=month].form-control {
 .why-choose-content {
 	padding-left: 3rem;
 	flex: 1 1 auto;
+}
+
+.guide-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -3rem;
+}
+
+.guide-item {
+	max-width: 33.33%;
+	flex-basis: 33.33%;
+	padding: 0 3rem 3rem;
 }
 
 .pagination {
