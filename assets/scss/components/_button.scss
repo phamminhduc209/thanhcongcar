@@ -1,4 +1,4 @@
-.btn {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,24 +34,28 @@
     }
 }
 
-.btn-primary {
+.button-primary {
     border-radius: rem(5px);
     border: 0;
     color: $white;
     font-weight: 500;
     text-transform: initial;
-    background: linear-gradient(to right, #0f959b, #064a50);
+    background-color: #0871b5;
+    // background: linear-gradient(270deg, #3bade3 0%, #576fe6 25%, #0871b5 51%, #ed2426 100%);
+    // background-position: 1% 50%;
+    // background-size: 200% auto;
     min-height: rem(45px);
     line-height: rem(45px);
     font-size: rem(14px);
     letter-spacing: .03em;
     padding: 0 1.2em;
     max-width: 100%;
-    transition: all .3s;
+    transition: opacity 0.3s ease-out;
 
     &:hover {
-        background: linear-gradient(to left, #0f959b, #064a50);
-        transition: all .3s;
+        // background-position: 99% 50%;
+        opacity: .8;
+        transition: opacity 0.3s ease-out;
     }
 }
 

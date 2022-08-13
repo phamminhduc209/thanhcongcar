@@ -10,6 +10,7 @@
     color: $input-color;
     background-color: $input-bg;
     background-clip: padding-box;
+    border-radius: rem(5px);
     border: rem($input-border-width) solid $input-border-color;
   
     // Unstyle the caret on `<select>`s in IE10+.
@@ -35,6 +36,10 @@
         background-color: $input-disabled-bg;
         opacity: 1;
     }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 input[type="date"],
@@ -43,5 +48,33 @@ input[type="datetime-local"],
 input[type="month"] {
     &.form-control {
         appearance: none; // Fix appearance for date inputs in Safari
+    }
+}
+
+.form {
+    &-ttl {
+        color: $primary;
+        text-align: center;
+        letter-spacing: .03em;
+    }
+
+    &-row {
+        &:not(:last-child) {
+            margin-bottom: rem(15px);
+        }
+        
+        &__ttl {
+            display: block;
+            margin-bottom: rem(5px);
+            text-transform: uppercase;
+            font-size: rem(15px);
+            font-weight: bold;
+        }
+    }
+
+    &-btn {
+        .button {
+            width: 100%;
+        }
     }
 }

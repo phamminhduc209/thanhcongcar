@@ -2,7 +2,7 @@
     padding: rem(50px) 0;
 
     &-title {
-        color: #EF2325;
+        color: #000;
         font-size: rem(30px);
         font-weight: bold;
         text-align: center;
@@ -22,6 +22,51 @@
 
     &-white {
         background-color: $white;
+    }
+
+    &-banner {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: relative;
+        padding-top: rem(30px);
+        padding-bottom: rem(30px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        @include mq('md', min) {
+            min-height: rem(300px);
+        }
+
+        &::before {
+            content: "";
+            background-color: rgba($color: #000000, $alpha: .5);
+            filter: blur(2px);
+            backdrop-filter: blur(2px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        &__ttl {
+            color: $white;
+            font-size: rem(30px);
+            position: relative;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+
+        &--about {
+            background-image: url(../images/banner-bai-viet-3.jpg);
+        }
+
+        &--4-seats{
+            background-image: url(../images/honda-civic-thue-tu-lai.jpg);
+        }
     }
 }
 
@@ -87,11 +132,17 @@
 
 .product {
     &-list {
-        display: flex;
+        @include mq('md', min) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 rem(-15px);
 
-        &-item {
-            flex: 0 0 33.33%;
-            max-width: 33.33%;
+            .product-item {
+                flex: 0 0 33.33%;
+                max-width: 33.33%;
+                padding: 0 rem(15px);
+                margin-bottom: rem(40px);
+            }
         }
     }
 
@@ -109,8 +160,8 @@
             }
 
             .btn-primary {
-                background: linear-gradient(to left, #0f959b, #064a50);
-                transition: all .3s;
+                background-position: 99% 50%;
+                transition: all 0.3s ease-out;
             }
         }
     }
@@ -144,7 +195,7 @@
                 align-items: center;
 
                 img {
-                    width: rem(20px);
+                    width: rem(23px);
                     margin-right: rem(10px);
                 }
             }

@@ -1,11 +1,12 @@
 .footer {
     background: linear-gradient(to right, #0374B0, #064a50);
-    padding: rem(40px) 0;
+    padding: rem(40px) 0 0;
 
     &-row {
         @include mq('md', min) {
             display: flex;
             flex-wrap: wrap;
+            margin: 0 rem(-15px);
         }
     }
 
@@ -13,6 +14,154 @@
         @include mq('md', min) {
             flex: 0 0 25%;
             max-width: 25%;
+            padding: 0 rem(15px);
+
+            @include mq('lg') {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
         }
+    }
+
+    &-ttl {
+        color: $white;
+        font-size: rem(18px);
+        font-weight: bold;
+        position: relative;
+        padding-bottom: rem(10px);
+        margin-bottom: rem(20px);
+
+        &::after {
+            background-color: $white;
+            content: "";
+            width: rem(100px);
+            height: rem(2px);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &-sub {
+        color: $white;
+        font-size: rem(16px);
+        font-weight: bold;
+        margin-bottom: rem(10px);
+
+    }
+
+    &-address {
+        li {
+            color: $white;
+            display: flex;
+            line-height: 1.2;
+            font-size: rem(13px);
+
+            &:not(:last-child) {
+                margin-bottom: rem(10px);
+            }
+
+            i {
+                margin-right: rem(10px);
+            }
+        }
+    }
+
+    &-menu {
+        &__item {
+            position: relative;
+            padding-left: rem(15px);
+
+            &:not(:last-child) {
+                margin-bottom: rem(10px);
+            }
+
+            &::before {
+                color: $white;
+                content: "\f054";
+                font-size: rem(10px);
+                font-family: "Font Awesome 6 Pro";
+                font-weight: 900;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                transition: left .3s ease-in-out;
+            }
+
+            &:hover {
+                &::before {
+                    left: rem(3px);
+                    transition: left .3s ease-in-out;
+                }
+            }
+
+            a {
+                color: $white;
+                font-size: rem(14px);
+            }
+        }
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+
+        a {
+            background-color: $white;
+            border-radius: 100%;
+            width: rem(35px);
+            height: rem(35px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .3s ease-in;
+            
+            &:not(:last-child) {
+                margin-right: rem(10px);
+            }
+
+            i {
+                font-size: rem(16px);
+                transition: color .3s ease-in;
+            }
+
+            &:hover {
+                i {
+                    color: $white;
+                    transition: color .3s ease-in;
+                }
+            }
+
+            &.facebook {
+                &:hover {
+                    background-color: #3a589d;
+                    transition: background .3s ease-in;
+                }
+            }
+
+            &.twitter {
+                &:hover {
+                    background-color: #2478ba;
+                    transition: background .3s ease-in;
+                }
+            }
+
+            &.youtube {
+                &:hover {
+                    background-color: #c33223;
+                    transition: background .3s ease-in;
+                }
+            }
+        }
+    }
+
+    &-copyright {
+        margin-top: rem(20px);
+        color: $white;
+        font-size: rem(14px);
+        text-align: center;
+        padding: rem(30px) 0;
     }
 }

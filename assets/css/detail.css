@@ -1,0 +1,121 @@
+.detail {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .detail-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -0.98rem;
+  }
+}
+@media (min-width: 768px) {
+  .detail-left, .detail-right {
+    padding: 0 0.98rem;
+  }
+}
+@media (min-width: 768px) {
+  .detail-left {
+    max-width: 66.66%;
+    -ms-flex-preferred-size: 66.66%;
+        flex-basis: 66.66%;
+  }
+}
+@media (min-width: 768px) {
+  .detail-right {
+    max-width: 33.33%;
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+  }
+}
+.detail-wrap {
+  background-color: white;
+  -webkit-box-shadow: 0 0 1rem 0 rgba(31, 28, 38, 0.35);
+          box-shadow: 0 0 1rem 0 rgba(31, 28, 38, 0.35);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .detail-wrap {
+    padding: 2rem;
+  }
+}
+.detail-head {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .detail-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -0.98rem;
+    margin-left: -0.98rem;
+  }
+}
+@media (min-width: 768px) {
+  .detail-head > * {
+    padding: 0 0.98rem;
+  }
+}
+@media (min-width: 768px) {
+  .detail-media {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+}
+@media (min-width: 768px) {
+  .detail-info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+}
+.detail-feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0.5rem -1rem 0;
+}
+.detail-feature__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0.5rem 2rem;
+}
+.detail-feature__item .ic {
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.detail-feature__item .ic img {
+  width: 2.3rem;
+  margin-right: 1rem;
+}
+
+.dot li {
+  list-style-type: disc;
+  margin-left: 1.3em;
+}
+.dot li:not(:last-child) {
+  margin-bottom: 0.6em;
+}
+
+.list > li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+embed, iframe, object {
+  max-width: 100%;
+}

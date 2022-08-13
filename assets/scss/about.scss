@@ -1,0 +1,108 @@
+@import 'common/variables';
+@import 'common/mixin';
+
+.about {
+    padding-top: rem(40px);
+    padding-bottom: rem(40px);
+
+    &-intro {
+        background-color: rgb(16, 125, 130);
+        border-radius: 10px;
+        
+        @include mq('md', min) {
+            padding: rem(30px);
+        }
+
+        &__box {
+            display: flex;
+            flex-direction: column-reverse;
+            
+            @include mq('md', min) {
+                flex-direction: row;
+                align-items: center;
+                margin: 0 rem(-15px);
+            }
+        }
+
+        &__text, &__media {
+            padding: 0 rem(15px);
+        }
+
+        &__text {
+            p {
+                color: $white;
+            }
+        }
+
+        &__media {
+            @include mq('md') {
+                margin-bottom: rem(30px);
+            }
+        }
+    }
+
+    &-detail {
+        margin-top: rem(80px);
+
+        &__box {
+            @include mq('md', min) {
+                display: flex;
+                align-items: center;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(30px);
+
+                @include mq('md', min) {
+                    margin-bottom: rem(80px);
+                }
+            }
+        }
+
+        &--reverse {
+            @include mq('md', min) {
+                flex-direction: row-reverse;
+
+                .about-detail__content {
+                    margin-left: 0;
+                    margin-right: rem(60px);
+                }
+            }
+        }
+
+        &__media {
+            border-radius: rem(10px);
+            overflow: hidden;
+
+            @include mq('md', min) {
+                flex: 0 0 rem(510px);
+                max-width: rem(510px);
+            }
+        }
+
+        &__content {
+            @include mq('md', min) {
+                flex: 1 auto;
+                margin-left: rem(60px);
+            }
+        }
+
+        &__ttl {
+            color: $primary;
+            font-size: rem(20px);
+            margin-bottom: rem(10px);
+
+            @include mq('md', min) {
+                font-size: rem(30px);
+            }
+        }
+
+        &__txt {
+            p {
+                &:not(:last-child) {
+                    margin-bottom: rem(10px);
+                }
+            }
+        }
+    }
+}

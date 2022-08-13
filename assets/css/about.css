@@ -1,0 +1,111 @@
+.about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.about-intro {
+  background-color: #107d82;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .about-intro {
+    padding: 3rem;
+  }
+}
+.about-intro__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .about-intro__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 -1.5rem;
+  }
+}
+.about-intro__text, .about-intro__media {
+  padding: 0 1.5rem;
+}
+.about-intro__text p {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .about-intro__media {
+    margin-bottom: 3rem;
+  }
+}
+.about-detail {
+  margin-top: 8rem;
+}
+@media (min-width: 768px) {
+  .about-detail__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.about-detail__box:not(:last-child) {
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .about-detail__box:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+}
+@media (min-width: 768px) {
+  .about-detail--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .about-detail--reverse .about-detail__content {
+    margin-left: 0;
+    margin-right: 6rem;
+  }
+}
+.about-detail__media {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .about-detail__media {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 51rem;
+            flex: 0 0 51rem;
+    max-width: 51rem;
+  }
+}
+@media (min-width: 768px) {
+  .about-detail__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 auto;
+            flex: 1 auto;
+    margin-left: 6rem;
+  }
+}
+.about-detail__ttl {
+  color: #107d82;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .about-detail__ttl {
+    font-size: 3rem;
+  }
+}
+.about-detail__txt p:not(:last-child) {
+  margin-bottom: 1rem;
+}

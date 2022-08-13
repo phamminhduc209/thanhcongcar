@@ -1,37 +1,27 @@
 .breadcrumb {
-    padding: rem(18px) 0 rem(21px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: rem(10px);
 
-    ul {
-        display: flex;
-        align-items: center;
-
-        > li {
-            color: #575757;
-            font-size: rem(12px);
-            font-weight: 500;
-            letter-spacing: .12em;
-
-            &:first-child {
-                font-size: rem(13px);
-                font-weight: bold;
-                letter-spacing: .08em;
-                position: relative;
-                top: 1px;
+    &-item {
+        & + .breadcrumb-item {
+            &::before {
+                color: $white;
+                content: "/";
+                padding: 0 rem(8px) 0 rem(12px);
             }
+        }
+    }
 
-            &:not(:last-child) {
-                &::after {
-                    content: '/';
-                    font-size: rem(13px);
-                    font-weight: 300;
-                    margin-left: rem(22px);
-                    margin-right: rem(17px);
-                }
-            }
+    &-link, &-text {
+        color: $white;
+        font-size: rem(14px);
+    }
 
-            a {
-                color: $body-color;
-            }
+    &-link {
+        &:hover {
+            color: $primary;
         }
     }
 }

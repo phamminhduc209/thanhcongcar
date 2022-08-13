@@ -1,0 +1,120 @@
+@import 'common/variables';
+@import 'common/mixin';
+
+.detail {
+    padding: rem(50px) 0;
+
+    &-row {
+        @include mq('md', min) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 rem(-9.8px);
+        }
+    }
+
+    &-left, &-right {
+        @include mq('md', min) {
+            padding: 0 rem(9.8px);
+        }
+    }
+
+    &-left {
+        @include mq('md', min) {
+            max-width: 66.66%;
+            flex-basis: 66.66%;
+        }
+    }
+
+    &-right {
+        @include mq('md', min) {
+            max-width: 33.33%;
+            flex-basis: 33.33%;
+        }
+    }
+
+    &-wrap {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 rem(10px) 0 rgb(31 28 38 / 35%);
+        border-radius: rem(10px);
+        padding: rem(10px);
+        
+        @include mq('md', min) {
+            padding: rem(20px);
+        }
+    }
+
+    &-head {
+        margin-bottom: rem(20px);
+
+        @include mq('md', min) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: rem(-9.8px);
+            margin-left: rem(-9.8px);
+        }
+
+        & > * {
+            @include mq('md', min) {
+                padding: 0 rem(9.8px);
+            }
+        }
+    }
+
+    &-media {
+        @include mq('md', min) {
+            flex: 0 0 60%;
+        }
+    }
+
+    &-info {
+        @include mq('md', min) {
+            flex: 0 0 40%;
+        }
+    }
+
+    &-feature {
+        display: flex;
+        flex-wrap: wrap;
+        margin: rem(5px) rem(-10px) 0;
+
+        &__item {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: rem(5px) rem(20px);
+            
+            .ic {
+                font-size: rem(16px);
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: rem(23px);
+                    margin-right: rem(10px);
+                }
+            }
+        }
+    }
+}
+
+.dot {
+    li {
+        list-style-type: disc;
+        margin-left: 1.3em;
+
+        &:not(:last-child) {
+            margin-bottom: 0.6em;
+        }
+    }
+}
+
+.list {
+    & > li {
+        &:not(:last-child) {
+            margin-bottom: rem(20px);
+        }
+    }
+}
+
+embed, iframe, object {
+    max-width: 100%;
+}
