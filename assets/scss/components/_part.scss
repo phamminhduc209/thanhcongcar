@@ -2,7 +2,7 @@
     padding: rem(50px) 0;
 
     &-title {
-        color: #000;
+        color: $primary;
         font-size: rem(30px);
         font-weight: bold;
         text-align: center;
@@ -88,8 +88,8 @@
         margin-bottom: rem(40px);
 
         @include mq('md', min) {
-            max-width: 50%;
-            flex-basis: 50%;
+            max-width: 33.33%;
+            flex-basis: 33.33%;
         }
     }
 
@@ -98,19 +98,32 @@
         
         @include mq('md', min) {
             padding: 0 rem(30px);
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
         }
     }
 
     &-img {
         @include mq('md', min) {
-            flex: 0 0 rem(80px);
-            max-width: rem(80px);
+            // flex: 0 0 rem(80px);
+            width: rem(150px);
+            height: rem(150px);
+            background-color: $primary;
+            border-radius: 100%;
+            margin: 0 auto rem(20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 60%;
+            }
         }
     }
 
     &-content {
+        text-align: center;
+
         @include mq('md', min) {
             padding-left: rem(30px);
             flex: 1 1 auto;
@@ -198,6 +211,21 @@
                     width: rem(23px);
                     margin-right: rem(10px);
                 }
+
+                // &-icon {
+                //     width: rem(40px);
+                //     height: rem(40px);
+                //     background-color: $primary;
+                //     border-radius: 100%;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                //     margin-right: rem(10px);
+
+                //     img {
+                //         max-width: 40%;
+                //     }
+                // }
             }
         }
     }
@@ -230,11 +258,24 @@
 
     &-media {
         margin-bottom: rem(20px);
+        // flex: 0 0 rem(80px);
+        width: rem(150px);
+        height: rem(150px);
+        background-color: $primary;
+        border-radius: 100%;
+        margin: 0 auto rem(20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
-            height: rem(233px);
-            width: auto;
+            max-width: 60%;
         }
+
+        // img {
+        //     height: rem(233px);
+        //     width: auto;
+        // }
     }
 
     h3 {

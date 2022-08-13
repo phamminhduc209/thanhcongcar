@@ -8,6 +8,7 @@ app.init = function () {
     app.jsSlider();
     app.productList();
     app.headerFix();
+    app.Sticky();
 };
 
 app.tab = function () {
