@@ -33,7 +33,6 @@
     }
 }
 
-
 .why-choose {
     &-list {
         display: flex;
@@ -102,6 +101,18 @@
         border-radius: rem(10px);
         display: block;
         overflow: hidden;
+
+        &:hover {
+            .product-ttl {
+                color: #ef2325;
+                transition: color .3s ease-in;
+            }
+
+            .btn-primary {
+                background: linear-gradient(to left, #0f959b, #064a50);
+                transition: all .3s;
+            }
+        }
     }
 
     img {
@@ -110,10 +121,11 @@
 
     &-info {
         padding: rem(15px);
+    }
 
-        h2 {
-            color: #EF2325;
-        }
+    &-ttl {
+        font-size: rem(18px);
+        transition: color .3s ease-in;
     }
 
     &-feature {
@@ -124,45 +136,16 @@
         &__item {
             flex: 0 0 50%;
             max-width: 50%;
-            padding: rem(5px) rem(10px);
+            padding: rem(5px) rem(20px);
             
             .ic {
                 font-size: rem(16px);
                 display: flex;
                 align-items: center;
 
-                &::before {
-                    content: "";
-                    display: inline-block;
-                    width: rem(24px);
-                    height: rem(24px);
-                    background-image: url(../images/all-icon.png);
-                    background-repeat: no-repeat;
-                    margin-right: rem(8px);
-                }
-
-                &--fuel {
-                    &::before {
-                        background-position: 0 rem(-75px);
-                    }
-                }
-
-                &--piston {
-                    &::before {
-                        background-position: rem(-34px) rem(-75px);
-                    }
-                }
-
-                &--tms {
-                    &::before{
-                        background-position: rem(-73px) rem(-75px);
-                    }
-                }
-
-                &--seat {
-                    &::before {
-                        background-position: rem(-100px) rem(-75px);
-                    }
+                img {
+                    width: rem(20px);
+                    margin-right: rem(10px);
                 }
             }
         }
@@ -170,52 +153,6 @@
 
     &-btn {
         margin-top: rem(15px);
-    }
-
-    &-slider {
-        .product-item {
-            padding: 0 rem(9.8px);
-        }
-
-        .slick-list{
-            padding-top: rem(20px) !important;
-            padding-bottom: rem(20px) !important;
-        }
-
-        .slick-arrow {
-            &::before {
-                content: "";
-                background-size: 100% 100%;
-                width: rem(25px);
-                height: rem(25px);
-                display: block;
-                transition: background .3s ease-in-out;
-            }
-        }
-
-        .slick-prev {
-            &::before {
-                background-image: url(../images/common/arrow_left.svg);
-            }
-
-            &:hover {
-                &::before {
-                    background-image: url(../images/common/arrow_left_hover.svg);
-                }
-            }
-        }
-
-        .slick-next {
-            &::before {
-                background-image: url(../images/common/arrow_right.svg);
-            }
-
-            &:hover {
-                &::before {
-                    background-image: url(../images/common/arrow_right_hover.svg);
-                }
-            }
-        }
     }
 }
 
@@ -256,10 +193,118 @@
 
     &-btn {
         margin-top: rem(30px);
-        
-        .btn {
-            max-width: rem(150px);
-            margin: 0 auto;
+    }
+}
+
+.experience {
+    &-box {
+        background-color: #fff;
+        box-shadow: 0 0 1rem 0 rgb(31 28 38 / 35%);
+        border-radius: 1rem;
+        display: block;
+        overflow: hidden;
+
+        &:hover {
+            .experience-ttl, .experience-date {
+                color: #ef2325;
+                transition: color .3s ease-in;
+            }
+        }
+    }
+
+    &-image {
+        padding-top: 75%;
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        background-position: 50% 50%;
+        background-size: cover;
+
+        img {
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            position: absolute;
+            object-position: 50% 50%;
+            object-fit: cover;
+        }
+    }
+
+    &-content {
+        padding: rem(15px);
+    }
+    
+    &-ttl {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: rem(5px);
+        font-weight: normal;
+        font-size: rem(16px);
+        text-align: center;
+        transition: color .3s ease-in;
+    }
+
+    &-date {
+        font-size: rem(14px);
+        text-align: center;
+        transition: color .3s ease-in;
+    }
+}
+
+.product-slider {
+    .product-item {
+        padding: 0 rem(9.8px);
+    }
+}
+
+.experience-slider {
+    .experience-item {
+        padding: 0 rem(9.8px);
+    }
+}
+
+.product-slider, .experience-slider {
+    .slick-list{
+        padding-top: rem(20px) !important;
+        padding-bottom: rem(20px) !important;
+    }
+
+    .slick-arrow {
+        &::before {
+            content: "";
+            background-size: 100% 100%;
+            width: rem(25px);
+            height: rem(25px);
+            display: block;
+            transition: background .3s ease-in-out;
+        }
+    }
+
+    .slick-prev {
+        &::before {
+            background-image: url(../images/common/arrow_left.svg);
+        }
+
+        &:hover {
+            &::before {
+                background-image: url(../images/common/arrow_left_hover.svg);
+            }
+        }
+    }
+
+    .slick-next {
+        &::before {
+            background-image: url(../images/common/arrow_right.svg);
+        }
+
+        &:hover {
+            &::before {
+                background-image: url(../images/common/arrow_right_hover.svg);
+            }
         }
     }
 }

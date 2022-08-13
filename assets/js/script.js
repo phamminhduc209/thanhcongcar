@@ -70,7 +70,7 @@ app.jsSlider = function () {
 }
 
 app.productList = function () {
-    $('.js-product-slider').slick({
+    $('.js-product-slider, .js-experience-slider').slick({
         dots: false,
         arrows: true,
         // autoplay: true,

@@ -1,0 +1,18 @@
+.footer {
+    background: linear-gradient(to right, #0374B0, #064a50);
+    padding: rem(40px) 0;
+
+    &-row {
+        @include mq('md', min) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-col {
+        @include mq('md', min) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+}

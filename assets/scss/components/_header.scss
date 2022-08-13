@@ -33,6 +33,8 @@
         display: block;
         font-size: rem(16px);
         position: relative;
+        display: block;
+        padding: rem(10px) 0;
 
         @include mq('md', min) {
             line-height: rem(60px);
